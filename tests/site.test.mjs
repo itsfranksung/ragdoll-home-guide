@@ -9,7 +9,8 @@ test("exports the interactive book landing screen", async () => {
 
   assert.match(html, /<html lang="zh-Hant">/);
   assert.match(html, /布偶貓<br\/>照顧說明書/);
-  assert.match(html, /你們願意帶我回家嗎？/);
+  assert.match(html, /你們…….*願意帶我回家嗎？/s);
+  assert.doesNotMatch(html, /熊、獅子……/);
   assert.match(html, /assets\/cat-guide\.webp/);
   assert.doesNotMatch(html, /Starter Project/);
   assert.doesNotMatch(html, /codex-preview/);
