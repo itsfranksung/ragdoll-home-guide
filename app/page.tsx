@@ -467,7 +467,7 @@ export default function HomePage() {
               {introReply ? (
                 <p>沒關係，我會等你。<br />但可以先陪我把這本書讀完嗎？</p>
               ) : (
-                <p>熊、獅子……<br />你們願意帶我回家嗎？</p>
+                <p>你們……<br />願意帶我回家嗎？</p>
               )}
               <div className="intro-actions">
                 <Button onClick={beginReading} className="read-button">
@@ -542,7 +542,7 @@ export default function HomePage() {
                 {visibleRight < 4 && "先把安全和用品一項一項準備好。"}
                 {visibleRight >= 4 && visibleRight < 8 && "時間和預算都穩定，照顧才不會變壓力。"}
                 {visibleRight >= 8 && visibleRight < 11 && "健康資料要親眼確認，不要只聽口頭保證。"}
-                {visibleRight === 11 && !(guideState.bearSigned && guideState.lionSigned) && "最後，換熊和獅子留下爪印。"}
+                {visibleRight === 11 && !(guideState.bearSigned && guideState.lionSigned) && "最後，換你們留下爪印。"}
                 {visibleRight === 11 && guideState.bearSigned && guideState.lionSigned && "謝謝你們願意認真準備我的一生。"}
               </div>
               <img src={asset("assets/cat-guide.webp")} alt="卡通布偶貓站在書旁導讀" />
