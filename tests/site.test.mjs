@@ -31,6 +31,7 @@ test("includes motion accessibility and page-turn styling", async () => {
   assert.match(css, /@media \(prefers-reduced-motion: reduce\)/);
   assert.match(css, /@keyframes flip-next/);
   assert.match(css, /@keyframes cat-arrive/);
+  assert.match(css, /--font-hand: "Hannotate TC"/);
 });
 
 test("contains twelve authored pages and local progress storage", async () => {
@@ -40,4 +41,5 @@ test("contains twelve authored pages and local progress storage", async () => {
   assert.match(source, /ragdoll-home-guide-progress-v1/);
   assert.match(source, /共同照顧聲明書/);
   assert.match(source, /HCM DNA 檢測結果/);
+  assert.match(source, /turnPage\(delta > 0 \? "next" : "prev"\)/);
 });
