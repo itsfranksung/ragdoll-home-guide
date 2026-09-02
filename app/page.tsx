@@ -501,8 +501,9 @@ export default function HomePage() {
                 const delta = event.clientX - pointerStart.current;
                 pointerStart.current = null;
                 if (Math.abs(delta) < 52) return;
-                turnPage(delta < 0 ? "next" : "prev");
+                turnPage(delta > 0 ? "next" : "prev");
               }}
+              onPointerCancel={() => { pointerStart.current = null; }}
             >
               <div className="book-block" aria-hidden="true" />
               {!isMobile && (
@@ -555,7 +556,7 @@ export default function HomePage() {
             </Button>
             <div className="page-indicator" aria-live="polite">
               <span>{isMobile ? visibleRight + 1 : `${visibleLeft + 1}–${visibleRight + 1}`} / {PAGE_COUNT}</span>
-              <small>也可以滑動頁面或用方向鍵</small>
+              <small>向右滑下一頁、向左滑上一頁，也可以用方向鍵</small>
             </div>
             <Button onClick={() => turnPage("next")} disabled={spreadStart >= maxStart || Boolean(turning)}>
               下一頁 <ArrowRight size={18} />
