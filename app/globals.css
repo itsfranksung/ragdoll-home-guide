@@ -1031,6 +1031,44 @@ label:has(button:focus-visible) {
   gap: .75rem;
 }
 
+.protect-grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: .65rem;
+}
+
+.protect-grid > div {
+  position: relative;
+  min-height: 112px;
+  padding: .75rem .65rem .6rem;
+  border: 1px solid rgba(99, 71, 51, .17);
+  border-radius: 12px;
+  background: rgba(255,255,255,.62);
+}
+
+.protect-grid > div > span {
+  position: absolute;
+  top: -.48rem;
+  left: .6rem;
+  width: 30px;
+  height: 30px;
+  display: grid;
+  place-items: center;
+  color: white;
+  border-radius: 50%;
+  background: var(--red);
+  font-family: var(--font-hand);
+  font-weight: 900;
+  transform: rotate(-5deg);
+}
+
+.protect-grid > div:nth-child(2) > span { background: var(--blue); }
+.protect-grid > div:nth-child(3) > span { background: var(--gold); }
+.protect-grid > div:nth-child(4) > span { background: #7c6a59; }
+.protect-grid b { display: block; margin: .35rem 0 .25rem 2rem; }
+.protect-grid p { margin: 0; color: #6d6055; font-size: .76rem; line-height: 1.55; }
+
 .care-grid > div {
   position: relative;
   min-height: 150px;
@@ -1165,8 +1203,8 @@ label:has(button:focus-visible) {
   font-weight: 800;
 }
 
-.story-page-10 .checklist { gap: .28rem; }
-.story-page-10 .check-row { min-height: 32px; padding: .32rem .5rem; }
+.story-page-12 .checklist { gap: .28rem; }
+.story-page-12 .check-row { min-height: 32px; padding: .32rem .5rem; }
 
 .sources {
   position: relative;
@@ -1534,6 +1572,9 @@ label:has(button:focus-visible) {
   .care-grid { gap: .5rem; }
   .care-grid > div { min-height: 132px; padding-inline: .55rem; }
   .care-grid p { font-size: .7rem; }
+  .protect-grid { gap: .5rem; }
+  .protect-grid > div { min-height: 128px; padding-inline: .55rem; }
+  .protect-grid p { font-size: .7rem; }
   .signature-row { gap: .4rem; }
   .signature { min-height: 52px; }
 }
