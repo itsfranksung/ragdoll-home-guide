@@ -22,7 +22,7 @@ import { Progress } from "@/components/ui/progress";
 const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 const asset = (path: string) => `${BASE_PATH}/${path}`;
 
-const PAGE_COUNT = 12;
+const PAGE_COUNT = 14;
 const STORAGE_KEY = "ragdoll-home-guide-progress-v1";
 
 const safetyItems = [
@@ -193,7 +193,34 @@ function StoryPage({
 
       {index === 3 && (
         <>
-          <PageHeader eyebrow="03｜帶我回家以前" title="請先替我準備這些" icon={<Home size={22} />} />
+          <PageHeader eyebrow="03｜先把危險固定住" title="請幫我保護家電" icon={<ShieldCheck size={22} />} />
+          <p className="page-lead">不只怕我弄壞東西，更要避免家電倒下、夾傷我，或讓我鑽進危險縫隙。</p>
+          <div className="protect-grid">
+            <div><span>穩</span><b>電視與高櫃</b><p>用防傾倒帶固定；落地燈底座要穩，別讓我一跳就整組倒下。</p></div>
+            <div><span>藏</span><b>電線與插座</b><p>收進硬式理線管和收納盒，充電線不用時請拔掉收好。</p></div>
+            <div><span>關</span><b>洗衣機與烘衣機</b><p>門平時關閉，每次啟動前檢查滾筒，別讓我躲在裡面睡覺。</p></div>
+            <div><span>封</span><b>家電後方縫隙</b><p>用擋板封好冰箱、洗衣機與櫃子後方，避免我受困或咬線。</p></div>
+          </div>
+          <div className="warning-note compact"><strong>廚房也要上鎖</strong><span>瓦斯旋鈕加安全鎖，料理後等爐面冷卻，再讓我靠近。</span></div>
+        </>
+      )}
+
+      {index === 4 && (
+        <>
+          <PageHeader eyebrow="04｜給我更好的選擇" title="家具不一定要犧牲" icon={<Home size={22} />} />
+          <div className="protect-grid furniture-grid">
+            <div><span>抓</span><b>沙發與桌腳</b><p>在我最想抓的位置旁放穩固高抓柱，初期可貼透明防抓貼。</p></div>
+            <div><span>護</span><b>床墊與布椅</b><p>鋪可拆洗保潔墊；剛回家、砂盆習慣未穩定時尤其重要。</p></div>
+            <div><span>收</span><b>窗簾與易碎物</b><p>固定窗簾拉繩；玻璃、模型和香氛蠟燭請收進有門的櫃子。</p></div>
+            <div><span>鎖</span><b>櫃門與抽屜</b><p>藥物、清潔劑和食物所在處加安全鎖，層板物品用防震黏土固定。</p></div>
+          </div>
+          <p className="page-quote small">我想抓哪裡，就把抓板放在那裡。<br />我抓對地方時請稱讚我，不要噴水或打罵。</p>
+        </>
+      )}
+
+      {index === 5 && (
+        <>
+          <PageHeader eyebrow="05｜帶我回家以前" title="請先替我準備這些" icon={<Home size={22} />} />
           <Checklist items={supplyItems} {...common} />
           <div className="scribble-note">
             <span>布偶專屬提醒</span>
@@ -202,9 +229,9 @@ function StoryPage({
         </>
       )}
 
-      {index === 4 && (
+      {index === 6 && (
         <>
-          <PageHeader eyebrow="04｜開始一起生活以前" title="帶我回家要準備多少？" icon={<WalletCards size={22} />} />
+          <PageHeader eyebrow="06｜開始一起生活以前" title="帶我回家要準備多少？" icon={<WalletCards size={22} />} />
           <div className="budget-stack">
             <div><span>買布偶貓</span><strong>NT$40,000–60,000</strong></div>
             <div><span>用品＋環境</span><strong>NT$20,000–40,000</strong></div>
@@ -215,9 +242,9 @@ function StoryPage({
         </>
       )}
 
-      {index === 5 && (
+      {index === 7 && (
         <>
-          <PageHeader eyebrow="05｜每個月穩定留給我" title="我的生活預算" icon={<WalletCards size={22} />} />
+          <PageHeader eyebrow="07｜每個月穩定留給我" title="我的生活預算" icon={<WalletCards size={22} />} />
           <div className="monthly-list">
             {[
               ["主食", "2,000–3,500"], ["貓砂", "600–1,000"], ["零食", "200–500"],
@@ -230,9 +257,9 @@ function StoryPage({
         </>
       )}
 
-      {index === 6 && (
+      {index === 8 && (
         <>
-          <PageHeader eyebrow="06｜不是整天黏著，是每天做到" title="一天怎麼陪我" icon={<Clock3 size={22} />} />
+          <PageHeader eyebrow="08｜不是整天黏著，是每天做到" title="一天怎麼陪我" icon={<Clock3 size={22} />} />
           <div className="day-clock">
             <div className="clock-ring"><Clock3 size={38} /><strong>45–90</strong><span>分鐘／天</span></div>
             <ol className="time-list">
@@ -246,9 +273,9 @@ function StoryPage({
         </>
       )}
 
-      {index === 7 && (
+      {index === 9 && (
         <>
-          <PageHeader eyebrow="07｜我每天都需要" title="吃、喝、玩、梳" icon={<Sparkles size={22} />} />
+          <PageHeader eyebrow="09｜我每天都需要" title="吃、喝、玩、梳" icon={<Sparkles size={22} />} />
           <div className="care-grid">
             <div><span>吃</span><b>第一週照舊</b><p>先讓我吃原本的食物；穩定後再慢慢換食，也請定量觀察我的體重。</p></div>
             <div><span>喝</span><b>每天乾淨水</b><p>水碗或飲水機都可以，重點是容易清洗，也要讓我願意喝。</p></div>
@@ -259,9 +286,9 @@ function StoryPage({
         </>
       )}
 
-      {index === 8 && (
+      {index === 10 && (
         <>
-          <PageHeader eyebrow="08｜我的健康比毛色更重要" title="請先替我確認 HCM" icon={<Stethoscope size={22} />} />
+          <PageHeader eyebrow="10｜我的健康比毛色更重要" title="請先替我確認 HCM" icon={<Stethoscope size={22} />} />
           <div className="hcm-card">
             <span>HCM</span>
             <div><strong>肥厚性心肌病</strong><p>我們布偶貓有可檢測的遺傳風險。見到我以前，請看繁殖種貓的 DNA 檢測結果，不要只看血統書。</p></div>
@@ -276,9 +303,9 @@ function StoryPage({
         </>
       )}
 
-      {index === 9 && (
+      {index === 11 && (
         <>
-          <PageHeader eyebrow="09｜先別急著把全家介紹完" title="陪我度過回家第一週" icon={<Home size={22} />} />
+          <PageHeader eyebrow="11｜先別急著把全家介紹完" title="陪我度過回家第一週" icon={<Home size={22} />} />
           <div className="week-timeline">
             <div><b>第 1–2 天</b><p>先讓我待在安靜安全房，給我躲藏處。沿用原本的飯與砂，不強抱、不圍觀。</p></div>
             <div><b>第 3–4 天</b><p>短時間陪我玩，等我主動靠近；也請記錄我的吃喝、尿量與便便。</p></div>
@@ -288,9 +315,9 @@ function StoryPage({
         </>
       )}
 
-      {index === 10 && (
+      {index === 12 && (
         <>
-          <PageHeader eyebrow="10｜見到我以前逐項確認" title="請替我把這些問清楚" icon={<ShieldCheck size={22} />} />
+          <PageHeader eyebrow="12｜見到我以前逐項確認" title="請替我把這些問清楚" icon={<ShieldCheck size={22} />} />
           <Checklist items={breederItems} {...common} />
           <div className="warning-note compact"><strong>健康檢測 ≠ 血統證書</strong><span>兩份資料都重要，但彼此不能互相取代。</span></div>
           <div className="sources">
@@ -302,7 +329,7 @@ function StoryPage({
         </>
       )}
 
-      {index === 11 && (
+      {index === 13 && (
         <>
           <p className="formal-label">我們的共同照顧約定</p>
           <h2 className="promise-title">你們不是一時心動，<br />是認真準備讓我成為家人。</h2>
@@ -546,11 +573,11 @@ export default function HomePage() {
 
             <aside className="guide-cat" aria-label="布偶貓導讀員">
               <div className="guide-bubble">
-                {visibleRight < 4 && "先陪我把安全和用品一項一項準備好。"}
-                {visibleRight >= 4 && visibleRight < 8 && "時間和預算都穩定，我們一起生活才不會變成壓力。"}
-                {visibleRight >= 8 && visibleRight < 11 && "請替我親眼確認健康資料，不要只聽口頭保證。"}
-                {visibleRight === 11 && !(guideState.bearSigned && guideState.lionSigned) && "最後，換你們留下爪印。"}
-                {visibleRight === 11 && guideState.bearSigned && guideState.lionSigned && "謝謝你們願意認真準備我的一生。"}
+                {visibleRight < 6 && "先陪我把安全、家電和家具一項一項準備好。"}
+                {visibleRight >= 6 && visibleRight < 10 && "時間和預算都穩定，我們一起生活才不會變成壓力。"}
+                {visibleRight >= 10 && visibleRight < 13 && "請替我親眼確認健康資料，不要只聽口頭保證。"}
+                {visibleRight === 13 && !(guideState.bearSigned && guideState.lionSigned) && "最後，換你們留下爪印。"}
+                {visibleRight === 13 && guideState.bearSigned && guideState.lionSigned && "謝謝你們願意認真準備我的一生。"}
               </div>
               <img src={asset("assets/cat-guide.webp")} alt="卡通布偶貓站在書旁導讀" />
             </aside>
