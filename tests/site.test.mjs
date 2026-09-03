@@ -35,11 +35,13 @@ test("includes motion accessibility and page-turn styling", async () => {
   assert.match(css, /--font-hand: "Iansui"/);
 });
 
-test("contains twelve authored pages and local progress storage", async () => {
+test("contains fourteen authored pages and local progress storage", async () => {
   const source = await readFile(new URL("app/page.tsx", root), "utf8");
 
-  assert.match(source, /const PAGE_COUNT = 12/);
+  assert.match(source, /const PAGE_COUNT = 14/);
   assert.match(source, /ragdoll-home-guide-progress-v1/);
+  assert.match(source, /請幫我保護家電/);
+  assert.match(source, /家具不一定要犧牲/);
   assert.match(source, /我們的共同照顧約定/);
   assert.match(source, /HCM DNA 檢測結果/);
   assert.match(source, /turnPage\(delta > 0 \? "next" : "prev"\)/);
