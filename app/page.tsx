@@ -154,8 +154,8 @@ function StoryPage({
       {index === 0 && (
         <>
           <div className="paper-tape tape-top" aria-hidden="true" />
-          <p className="formal-label">給熊與獅子的正式文件</p>
-          <h2 className="opening-title">布偶貓<br />回家準備書</h2>
+          <p className="formal-label">這是我想和你們一起讀的第一本書</p>
+          <h2 className="opening-title">布偶貓<br />照顧準備書</h2>
           <div className="portrait-frame">
             <img src={asset("assets/cat-portrait.webp")} alt="白色布偶貓坐在櫃子裡的照片" />
           </div>
@@ -168,7 +168,7 @@ function StoryPage({
 
       {index === 1 && (
         <>
-          <PageHeader eyebrow="01｜先看最重要的數字" title="我們準備好了嗎？" icon={<Heart size={22} />} />
+          <PageHeader eyebrow="01｜先陪我看看最重要的數字" title="我們準備好了嗎？" icon={<Heart size={22} />} />
           <div className="hero-number-grid">
             <div className="hero-number pink"><strong>每天</strong><b>45–90</b><span>分鐘的專心照顧</span></div>
             <div className="hero-number blue"><strong>每月</strong><b>6,000–8,000</b><span>元的穩定預算</span></div>
@@ -184,8 +184,8 @@ function StoryPage({
 
       {index === 2 && (
         <>
-          <PageHeader eyebrow="02｜比漂亮家具更優先" title="先把家變安全" icon={<ShieldCheck size={22} />} />
-          <p className="page-lead">布偶貓體型大、好奇又信任人。先消除會墜落、纏繞、誤食與受困的風險。</p>
+          <PageHeader eyebrow="02｜比漂亮家具更重要" title="先陪我把家變安全" icon={<ShieldCheck size={22} />} />
+          <p className="page-lead">我體型大、好奇又很信任人。請先替我排除墜落、纏繞、誤食與受困的風險。</p>
           <Checklist items={safetyItems} {...common} />
           <div className="warning-note"><strong>一般紗窗 ≠ 防墜網</strong><span>防護必須牢固固定，不能只靠磁吸或黏貼。</span></div>
         </>
@@ -193,31 +193,31 @@ function StoryPage({
 
       {index === 3 && (
         <>
-          <PageHeader eyebrow="03｜接我以前先買好" title="必要用品清單" icon={<Home size={22} />} />
+          <PageHeader eyebrow="03｜帶我回家以前" title="請先替我準備這些" icon={<Home size={22} />} />
           <Checklist items={supplyItems} {...common} />
           <div className="scribble-note">
             <span>布偶專屬提醒</span>
-            砂盆、外出籠、跳台平台都直接選大型；幼貓現在用得下，不代表成年後塞得下。
+            我長大後會是一隻大貓，砂盆、外出籠、跳台平台都請直接選大型；現在用得下，不代表成年後還塞得下。
           </div>
         </>
       )}
 
       {index === 4 && (
         <>
-          <PageHeader eyebrow="04｜開始養以前" title="一次性預算" icon={<WalletCards size={22} />} />
+          <PageHeader eyebrow="04｜開始一起生活以前" title="帶我回家要準備多少？" icon={<WalletCards size={22} />} />
           <div className="budget-stack">
             <div><span>買布偶貓</span><strong>NT$40,000–60,000</strong></div>
             <div><span>用品＋環境</span><strong>NT$20,000–40,000</strong></div>
             <div><span>醫療預備金</span><strong>NT$50,000–100,000</strong></div>
           </div>
           <div className="budget-total"><small>可動用資源，包含買貓</small><strong>NT$110,000–200,000</strong></div>
-          <p className="fine-print">真正接回家前通常先支出約 6–10 萬元；醫療基金是保留在旁邊，不代表第一天就會花掉。</p>
+          <p className="fine-print">真正帶我回家前通常先支出約 6–10 萬元；醫療基金請替我保留在旁邊，不代表第一天就會花掉。</p>
         </>
       )}
 
       {index === 5 && (
         <>
-          <PageHeader eyebrow="05｜每個月穩定留下" title="生活預算" icon={<WalletCards size={22} />} />
+          <PageHeader eyebrow="05｜每個月穩定留給我" title="我的生活預算" icon={<WalletCards size={22} />} />
           <div className="monthly-list">
             {[
               ["主食", "2,000–3,500"], ["貓砂", "600–1,000"], ["零食", "200–500"],
@@ -226,7 +226,7 @@ function StoryPage({
             ].map(([label, price]) => <div key={label}><span>{label}</span><b>NT${price}</b></div>)}
           </div>
           <div className="monthly-total"><span>安心抓</span><strong>每月 NT$6,000–8,000</strong></div>
-          <p className="fine-print">個別月份可能更低或更高；重點是有預算承受驅蟲、耗材與突然看診。</p>
+          <p className="fine-print">有些月份可能更低或更高；重點是我需要驅蟲、補耗材或突然看診時，你們不會措手不及。</p>
         </>
       )}
 
@@ -242,18 +242,18 @@ function StoryPage({
               <li><b>每週 1–2 次</b><span>金屬排梳梳到毛根</span></li>
             </ol>
           </div>
-          <div className="weekly-note">每週另留 30–60 分鐘清洗砂盆、飲水設備與環境。</div>
+          <div className="weekly-note">也請每週另留 30–60 分鐘，替我清洗砂盆、飲水設備和生活環境。</div>
         </>
       )}
 
       {index === 7 && (
         <>
-          <PageHeader eyebrow="07｜每天照顧的四件事" title="吃、喝、玩、梳" icon={<Sparkles size={22} />} />
+          <PageHeader eyebrow="07｜我每天都需要" title="吃、喝、玩、梳" icon={<Sparkles size={22} />} />
           <div className="care-grid">
-            <div><span>吃</span><b>第一週照舊</b><p>先沿用原食物；穩定後才逐步換食，並定量觀察體重。</p></div>
-            <div><span>喝</span><b>每天乾淨水</b><p>水碗或飲水機都可以，重點是容易清洗、願意喝。</p></div>
-            <div><span>玩</span><b>每天互動</b><p>逗貓棒、球與抓板，讓大型布偶維持活動量。</p></div>
-            <div><span>梳</span><b>每週 1–2 次</b><p>腋下與換毛期多檢查；指甲約每月依生長速度修剪。</p></div>
+            <div><span>吃</span><b>第一週照舊</b><p>先讓我吃原本的食物；穩定後再慢慢換食，也請定量觀察我的體重。</p></div>
+            <div><span>喝</span><b>每天乾淨水</b><p>水碗或飲水機都可以，重點是容易清洗，也要讓我願意喝。</p></div>
+            <div><span>玩</span><b>每天互動</b><p>用逗貓棒、球和抓板陪我活動，別讓大型布偶變成一團懶洋洋的毛球。</p></div>
+            <div><span>梳</span><b>每週 1–2 次</b><p>請多看看我的腋下和換毛期；指甲也要依生長速度定期修剪。</p></div>
           </div>
           <p className="page-quote small">漂亮貓窩可以晚點買，<br />乾淨的水、穩定的飯和陪玩不能晚。</p>
         </>
@@ -261,16 +261,16 @@ function StoryPage({
 
       {index === 8 && (
         <>
-          <PageHeader eyebrow="08｜健康來源比毛色更重要" title="布偶貓必查 HCM" icon={<Stethoscope size={22} />} />
+          <PageHeader eyebrow="08｜我的健康比毛色更重要" title="請先替我確認 HCM" icon={<Stethoscope size={22} />} />
           <div className="hcm-card">
             <span>HCM</span>
-            <div><strong>肥厚性心肌病</strong><p>布偶貓有可檢測的遺傳風險。看貓時要看繁殖種貓的 DNA 檢測結果，不只看血統書。</p></div>
+            <div><strong>肥厚性心肌病</strong><p>我們布偶貓有可檢測的遺傳風險。見到我以前，請看繁殖種貓的 DNA 檢測結果，不要只看血統書。</p></div>
           </div>
           <ul className="health-list">
-            <li><Check size={16} />接回後找固定獸醫建立健康基準</li>
-            <li><Check size={16} />確認疫苗、驅蟲、晶片與登記資料</li>
-            <li><Check size={16} />定期觀察體重、食慾、呼吸與排泄</li>
-            <li><Check size={16} />醫療預備金不要拿去補一般消費</li>
+            <li><Check size={16} />帶我回家後，找固定獸醫建立健康基準</li>
+            <li><Check size={16} />替我確認疫苗、驅蟲、晶片與登記資料</li>
+            <li><Check size={16} />平常觀察我的體重、食慾、呼吸與排泄</li>
+            <li><Check size={16} />請把我的醫療預備金留給真正需要的時候</li>
           </ul>
           <div className="law-note">台灣自 2026 年起，未依規定替貓植入晶片並辦理寵物登記，可處 NT$3,000–15,000 罰鍰。</div>
         </>
@@ -278,19 +278,19 @@ function StoryPage({
 
       {index === 9 && (
         <>
-          <PageHeader eyebrow="09｜不要急著把全家介紹完" title="回家第一週" icon={<Home size={22} />} />
+          <PageHeader eyebrow="09｜先別急著把全家介紹完" title="陪我度過回家第一週" icon={<Home size={22} />} />
           <div className="week-timeline">
-            <div><b>第 1–2 天</b><p>待在安靜安全房，提供躲藏處。沿用原本的飯與砂，不強抱、不圍觀。</p></div>
-            <div><b>第 3–4 天</b><p>短時間陪玩，讓牠主動靠近；記錄吃喝、尿量與便便。</p></div>
-            <div><b>第 5–7 天</b><p>依適應狀況慢慢擴大活動範圍，安排自己的獸醫初診。</p></div>
+            <div><b>第 1–2 天</b><p>先讓我待在安靜安全房，給我躲藏處。沿用原本的飯與砂，不強抱、不圍觀。</p></div>
+            <div><b>第 3–4 天</b><p>短時間陪我玩，等我主動靠近；也請記錄我的吃喝、尿量與便便。</p></div>
+            <div><b>第 5–7 天</b><p>看我的適應狀況慢慢擴大活動範圍，再帶我去固定獸醫那裡初診。</p></div>
           </div>
-          <div className="urgent-note">若持續不吃、不排尿、呼吸異常或精神明顯變差，直接聯絡獸醫，不要只在網路上等答案。</div>
+          <div className="urgent-note">如果我持續不吃、不排尿、呼吸異常或精神明顯變差，請直接聯絡獸醫，不要只在網路上等答案。</div>
         </>
       )}
 
       {index === 10 && (
         <>
-          <PageHeader eyebrow="10｜去貓舍時逐項確認" title="一定要問清楚" icon={<ShieldCheck size={22} />} />
+          <PageHeader eyebrow="10｜見到我以前逐項確認" title="請替我把這些問清楚" icon={<ShieldCheck size={22} />} />
           <Checklist items={breederItems} {...common} />
           <div className="warning-note compact"><strong>健康檢測 ≠ 血統證書</strong><span>兩份資料都重要，但彼此不能互相取代。</span></div>
           <div className="sources">
@@ -304,10 +304,10 @@ function StoryPage({
 
       {index === 11 && (
         <>
-          <p className="formal-label">共同照顧聲明書</p>
-          <h2 className="promise-title">我們不是衝動帶你回家，<br />是認真準備讓你成為家人。</h2>
-          <img className="bear-lion" src={asset("assets/bear-lion.webp")} alt="白熊與獅子一起讀照顧說明書的插畫" />
-          <p className="promise-copy">本熊與獅子願意提供安全、陪伴、穩定飲食與必要醫療，並尊重每一隻貓自己的個性與適應速度。</p>
+          <p className="formal-label">我們的共同照顧約定</p>
+          <h2 className="promise-title">你們不是一時心動，<br />是認真準備讓我成為家人。</h2>
+          <img className="bear-lion" src={asset("assets/bear-lion.webp")} alt="兩位家人一起讀照顧說明書的插畫" />
+          <p className="promise-copy">如果你們願意給我安全、陪伴、穩定飲食與需要的醫療，也尊重我的個性和適應速度，請在這裡留下兩枚爪印。</p>
           <div className="signature-row">
             <button
               type="button"
@@ -315,7 +315,7 @@ function StoryPage({
               onClick={() => !staticMode && onSign("bear")}
               disabled={staticMode}
             >
-              <PawPrint size={26} /><span>{bearSigned ? "熊已按爪印" : "熊按爪印"}</span>
+              <PawPrint size={26} /><span>{bearSigned ? "第一枚已完成" : "第一枚爪印"}</span>
             </button>
             <button
               type="button"
@@ -323,7 +323,7 @@ function StoryPage({
               onClick={() => !staticMode && onSign("lion")}
               disabled={staticMode}
             >
-              <PawPrint size={26} /><span>{lionSigned ? "獅子已按爪印" : "獅子按爪印"}</span>
+              <PawPrint size={26} /><span>{lionSigned ? "第二枚已完成" : "第二枚爪印"}</span>
             </button>
           </div>
           {bearSigned && lionSigned && <div className="promise-complete"><Heart size={17} fill="currentColor" /> 那我可以安心期待回家了。</div>}
@@ -451,11 +451,11 @@ export default function HomePage() {
             <div className="front-cover">
               <div className="cover-tape" aria-hidden="true" />
               <p>共同生活準備文件</p>
-              <h1>布偶貓<br />照顧說明書</h1>
+              <h1>布偶貓<br />照顧準備書</h1>
               <div className="cover-photo">
                 <img src={asset("assets/cat-cover.webp")} alt="女友喜歡的白色布偶貓封面照片" />
               </div>
-              <span>熊 × 獅子 × 一隻藍眼睛的貓</span>
+              <span>你們 × 一隻藍眼睛的貓</span>
               <div className="cover-stamp"><PawPrint size={34} /><b>回家前必讀</b></div>
             </div>
           </div>
@@ -540,9 +540,9 @@ export default function HomePage() {
 
             <aside className="guide-cat" aria-label="布偶貓導讀員">
               <div className="guide-bubble">
-                {visibleRight < 4 && "先把安全和用品一項一項準備好。"}
-                {visibleRight >= 4 && visibleRight < 8 && "時間和預算都穩定，照顧才不會變壓力。"}
-                {visibleRight >= 8 && visibleRight < 11 && "健康資料要親眼確認，不要只聽口頭保證。"}
+                {visibleRight < 4 && "先陪我把安全和用品一項一項準備好。"}
+                {visibleRight >= 4 && visibleRight < 8 && "時間和預算都穩定，我們一起生活才不會變成壓力。"}
+                {visibleRight >= 8 && visibleRight < 11 && "請替我親眼確認健康資料，不要只聽口頭保證。"}
                 {visibleRight === 11 && !(guideState.bearSigned && guideState.lionSigned) && "最後，換你們留下爪印。"}
                 {visibleRight === 11 && guideState.bearSigned && guideState.lionSigned && "謝謝你們願意認真準備我的一生。"}
               </div>
