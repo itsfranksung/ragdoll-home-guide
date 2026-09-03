@@ -43,5 +43,8 @@ test("contains twelve authored pages and local progress storage", async () => {
   assert.match(source, /我們的共同照顧約定/);
   assert.match(source, /HCM DNA 檢測結果/);
   assert.match(source, /turnPage\(delta > 0 \? "next" : "prev"\)/);
+  assert.match(source, /bearSigned: !current\.bearSigned/);
+  assert.match(source, /lionSigned: !current\.lionSigned/);
+  assert.match(source, /取消第一枚爪印/);
   assert.doesNotMatch(source, /熊|獅子/);
 });
