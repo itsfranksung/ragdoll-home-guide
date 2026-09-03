@@ -314,16 +314,20 @@ function StoryPage({
               className={`signature ${bearSigned ? "signed" : ""}`}
               onClick={() => !staticMode && onSign("bear")}
               disabled={staticMode}
+              aria-pressed={bearSigned}
+              aria-label={bearSigned ? "取消第一枚爪印" : "按下第一枚爪印"}
             >
-              <PawPrint size={26} /><span>{bearSigned ? "第一枚已完成" : "第一枚爪印"}</span>
+              <PawPrint size={26} /><span>{bearSigned ? "第一枚已完成｜點擊取消" : "第一枚爪印"}</span>
             </button>
             <button
               type="button"
               className={`signature ${lionSigned ? "signed" : ""}`}
               onClick={() => !staticMode && onSign("lion")}
               disabled={staticMode}
+              aria-pressed={lionSigned}
+              aria-label={lionSigned ? "取消第二枚爪印" : "按下第二枚爪印"}
             >
-              <PawPrint size={26} /><span>{lionSigned ? "第二枚已完成" : "第二枚爪印"}</span>
+              <PawPrint size={26} /><span>{lionSigned ? "第二枚已完成｜點擊取消" : "第二枚爪印"}</span>
             </button>
           </div>
           {bearSigned && lionSigned && <div className="promise-complete"><Heart size={17} fill="currentColor" /> 那我可以安心期待回家了。</div>}
@@ -392,10 +396,12 @@ export default function HomePage() {
     }));
   }, []);
 
-  const sign = useCallback((who: "bear" | "lion") => {
+  const toggleSign = useCallback((who: "bear" | "lion") => {
     setGuideState((current) => ({
       ...current,
-      ...(who === "bear" ? { bearSigned: true } : { lionSigned: true }),
+      ...(who === "bear"
+        ? { bearSigned: !current.bearSigned }
+        : { lionSigned: !current.lionSigned }),
     }));
   }, []);
 
@@ -431,7 +437,7 @@ export default function HomePage() {
     onToggle: toggleItem,
     bearSigned: guideState.bearSigned,
     lionSigned: guideState.lionSigned,
-    onSign: sign,
+    onSign: toggleSign,
   };
 
   const turningFront = turning === "next" ? visibleRight : visibleLeft;
